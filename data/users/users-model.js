@@ -2,6 +2,7 @@ const db = require('../connection')
 
 module.exports = {
     find,
+    findsesh,
     findBy,
     add,
     findById
@@ -9,6 +10,10 @@ module.exports = {
 
 function find() {
     return db('users').orderBy("id")
+}
+
+function findsesh(){
+    return db('sessions')
 }
 
 function findBy (filter) {

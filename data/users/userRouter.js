@@ -9,4 +9,11 @@ router.get('/', (req,res) => {
         }).catch( err => res.send(err));
 })
 
+router.get('/sesh', (req,res) => {
+    Users.findsesh()
+        .then(users => {
+            res.json(users);
+        }).catch( err => res.send(err));
+})
+
 module.exports = router
